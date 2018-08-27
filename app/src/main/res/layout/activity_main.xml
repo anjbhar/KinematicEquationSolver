@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.anjaneya2bgmail.kinematics.MainActivity"
+    android:baselineAligned="false">
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/solve"
+        android:layout_centerHorizontal="true"
+        android:text="Clear" />
+
+    <EditText
+        android:id="@+id/acceleration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:ems="10"
+        android:inputType="number|numberSigned|numberDecimal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivelocity"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:inputType="number|numberSigned|numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@+id/acceleration"
+        app:layout_constraintTop_toBottomOf="@+id/acceleration"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/fvelocity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/acceleration"
+        android:ems="10"
+        android:inputType="number|numberSigned|numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@+id/time"
+        app:layout_constraintRight_toRightOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/ivelocity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/distance"
+        android:ems="10"
+        android:inputType="number|numberSigned|numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@+id/fvelocity"
+        app:layout_constraintRight_toRightOf="@+id/fvelocity"
+        app:layout_constraintTop_toBottomOf="@+id/fvelocity"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/fvelocity"
+        android:ems="10"
+        android:inputType="number|numberSigned|numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@+id/ivelocity"
+        app:layout_constraintRight_toRightOf="@+id/ivelocity"
+        app:layout_constraintTop_toBottomOf="@+id/ivelocity"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/solve"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/resultt"
+        android:layout_centerHorizontal="true"
+        android:text="Solve" />
+
+    <TextView
+        android:id="@+id/accel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fvelocity"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/acceleration"
+        android:layout_toRightOf="@+id/acceleration"
+        android:gravity="center_vertical"
+        android:text="acceleration, a"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/fv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/distance"
+        android:layout_below="@+id/acceleration"
+        android:layout_toEndOf="@+id/fvelocity"
+        android:layout_toRightOf="@+id/fvelocity"
+        android:gravity="center_vertical"
+        android:text="final velocity, Vf"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivelocity"
+        android:layout_below="@+id/fvelocity"
+        android:layout_toEndOf="@+id/fvelocity"
+        android:layout_toRightOf="@+id/fvelocity"
+        android:gravity="center_vertical"
+        android:text="displacement, d"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/initialv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/ivelocity"
+        android:layout_below="@+id/dist"
+        android:layout_toEndOf="@+id/ivelocity"
+        android:layout_toRightOf="@+id/ivelocity"
+        android:gravity="center_vertical"
+        android:text="initial velocity, Vi"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/time"
+        android:layout_below="@+id/initialv"
+        android:layout_toEndOf="@+id/time"
+        android:layout_toRightOf="@+id/time"
+        android:gravity="center_vertical"
+        android:text="time, t"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="Enter known values below:"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/resultt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/time"
+        android:gravity="center"
+        android:textSize="25sp" />
+
+
+</RelativeLayout>
