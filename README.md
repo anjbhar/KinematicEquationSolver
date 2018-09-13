@@ -1,4 +1,4 @@
-# KinematicEquationSolver
+# KinematicEquationSolver Android application
 kinematic physics equation 1D calculator
 
 Android application that can be used to solve 1d motion problems.
@@ -7,6 +7,6 @@ Android application that can be used to solve 1d motion problems.
 2. calculates solutions using kinematic equations
 
 
-Could be added:
+TO DO
 1. Show relevant work
 2. 2d projectile motion support
