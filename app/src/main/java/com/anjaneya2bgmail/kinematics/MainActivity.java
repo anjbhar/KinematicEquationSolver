@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         rAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         rAdView.loadAd(adRequest);
+        
         acceleration = (EditText)findViewById(R.id.acceleration);
         time = (EditText)findViewById(R.id.time);
         distance = (EditText)findViewById(R.id.distance);
