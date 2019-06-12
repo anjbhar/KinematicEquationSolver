@@ -1,4 +1,5 @@
 *.pro
+strings.xml
 *.iml
 .gradle
 /local.properties
