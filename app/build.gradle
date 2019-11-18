@@ -12,8 +12,8 @@ android {
         applicationId 'com.anjaneya2bgmail.kinematics'
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 10
-        versionName '3.1'
+        versionCode 13
+        versionName '3.4'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
